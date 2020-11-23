@@ -71,7 +71,7 @@ namespace NotificationService
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<MainService>();
                 endpoints.MapGrpcReflectionService();
                 endpoints.MapGet("/",
                     async context =>
