@@ -1,0 +1,6 @@
+[submodule "Protos"]
+	path = Protos
+	url = https://github.com/LLJY/Knot-Protos.git
+[submodule "NotificationService/Protos"]
+	path = NotificationService/Protos
+	url = https://github.com/LLJY/Knot-Protos
