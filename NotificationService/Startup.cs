@@ -38,6 +38,7 @@ namespace NotificationService
             services.AddSingleton<UserTokensService>();
             FirebaseApp.Create();
             services.AddGrpc();
+            services.AddGrpcReflection();
             // setup jwt to verify firebase tokens
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
