@@ -4,9 +4,10 @@
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": false,
-      "applicationUrl": "http://localhost:6000;https://localhost:6001",
+      "applicationUrl": "http://localhost:11000;http://localhost:11001",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GOOGLE_APPLICATION_CREDENTIALS": "/home/lucas/Projects/School/MCSV/Services/google-credentials.json"
       }
     }
   }

@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using NotificationService.Models;
 using NotificationService.Services;
 using UserService.Protos;
@@ -33,7 +34,7 @@ namespace NotificationService
         {
             // requires using Microsoft.Extensions.Options
             services.Configure<UserTokensDatabaseSettings>(_configuration.GetSection(nameof(UserTokensDatabaseSettings)));
-            services.AddSingleton(sp =>
+            services.AddSingleton<IUserTokensDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<UserTokensDatabaseSettings>>().Value);
             services.AddSingleton<UserTokensService>();
             FirebaseApp.Create();
